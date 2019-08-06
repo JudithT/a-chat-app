@@ -1,0 +1,8 @@
+.page-center {
+    display: flex;
+  justify-content: center;
+   height: 100vh;
+}
+.user-form {
+    align-self: center;
+}

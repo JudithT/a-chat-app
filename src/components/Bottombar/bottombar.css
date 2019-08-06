@@ -1,0 +1,26 @@
+.chat-form{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.textarea{
+    width:760 px
+
+}
+textarea{
+    width: 760px;
+    height: 50px
+}
+.btn-light{
+   margin-left:20px;
+   height: 50px;   
+   color: blue;
+   background-color: white;
+   font-size: 20px
+}
+.form-container{
+    height: 8vh;
+    padding: 20px
+}
