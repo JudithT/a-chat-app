@@ -1,7 +1,8 @@
 .message-container{
     min-height: 80vh;
     overflow: scroll;
-    background-color: #f0f0f5
+    background-color: #f0f0f5;
+    padding: 0 15px;
 }
 
 .member-message{
@@ -10,28 +11,29 @@
 }
 .user-message{
    display: flex;
-   flex-direction: column;
+   justify-content: flex-end;
 }
 
 .user-message-content{
     background-color: red;
     color:white;
-    border-radius: 5%;
     width: fit-content;
     margin-bottom: 20px;
-    min-width: 10vw;
     text-align: center;
+    padding: 10px 25px;
+    border-radius: 22px;
 }
 .member-name {
-    color:black; 
+    color:rgb(95, 95, 95); 
     width: fit-content;
+    font-size: 14px;
 }
 .member-message-content{
     justify-content: left;
     background-color: white;
     color:black;
     text-align: center;
-    border-radius: 5%;
-    min-width: 10vw;
     width: fit-content;
+    padding: 10px 25px;
+    border-radius: 22px;
 }

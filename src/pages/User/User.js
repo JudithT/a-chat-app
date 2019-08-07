@@ -14,12 +14,12 @@ import './User.css';
   return (
     <div className="page-center">
       <form className="user-form">
-        <div>
+        <div className="top">
         <label>
           <input type="text" value={username} onChange={(event) => setUsername(event.target.value)} placeholder="Type your username..."/>
         </label>
         </div>
-        <div>
+        <div className="bottom">
           <Button disabled={!username} variant="danger" onClick={handleSumbit}>Join the Doordash chat!</Button>
         </div>
       </form>

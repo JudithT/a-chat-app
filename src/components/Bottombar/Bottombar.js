@@ -21,7 +21,7 @@ class Bottombar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value:""
+      value: ""
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -29,42 +29,47 @@ class Bottombar extends React.Component {
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({ value: event.target.value });
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    if(!this.state.value){
+    if (!this.state.value) {
       return
-    }else {
+    } else {
       const { activeRoomId, username, newMessageAdded } = this.props;
-      axiosInstance.post(`/rooms/${activeRoomId}/messages`, 
-      { 
-        name: username,
-        message: this.state.value,
-      }) 
-     .then((res)=> {
+      axiosInstance.post(`/rooms/${activeRoomId}/messages`,
+        {
+          name: username,
+          message: this.state.value,
+        })
+        .then((res) => {
 
-      newMessageAdded()
-    })
+          newMessageAdded();
+        })
 
-    .catch((err)=> {
-     //alert(err.message);
-    })
+        .catch((err) => {
+          //alert(err.message);
+        })
+        this.setState({value: ""});
     }
   }
 
   render() {
     return (
       <div className="form-container">
-        <form sclassName="chat-form">
-        <label className="textarea">
-          <textarea value={this.state.value} placeholder="Type your message..." onChange={this.handleChange} />
-        </label >
-        <button type="button" className="btn btn-light" onClick={this.handleSubmit}>Send</button>
+        <form className="chat-form">
+          <div class="bottomWrapper">
+              <div className="left">
+                <textarea value={this.state.value} placeholder="Type your message..." onChange={this.handleChange} />
+              </div >
+            <div className="right">
+              <button type="button" className="btn btn-light" onClick={this.handleSubmit}>Send</button>
+            </div>
+          </div>
         </form>
       </div>
-      
+
     );
   }
 }

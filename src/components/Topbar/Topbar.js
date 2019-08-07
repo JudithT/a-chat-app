@@ -27,12 +27,8 @@ const [users, setUsers] = useState([])
         <div className="header">
             <div><h2>{roomName}</h2></div>
             <div className="participants"><span className="primary_user">{username}, </span>{users.join(" ,")}</div>
-        </div>
-        
+        </div>    
     </div>
-
-
-
 
   );
 }

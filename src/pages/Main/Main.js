@@ -5,6 +5,7 @@ import Bottombar from '../../components/Bottombar/Bottombar';
 import Topbar from '../../components/Topbar/Topbar';
 import Messagebar from '../../components/Messagebar/Messagebar';
 import { axiosInstance } from "../../config";
+import './Main.css';
 
 
 const Main = () => {
@@ -36,9 +37,9 @@ const Main = () => {
   }
 
 
-  if(loading){
-    return <div>loading ...</div>
-  }
+  // if(loading){
+  //   return <div>loading ...</div>
+  // }
 
   return (
     <Container fluid={true}>
@@ -52,7 +53,7 @@ const Main = () => {
         </Col>
        
        
-        <Col xs={10}>
+        <Col xs={10} className="right-bar">
           <Topbar activeRoomId={activeRoomId} username={username}/>
           <Messagebar key={messageBarKey} activeRoomId={activeRoomId} username={username} newMessageAdded={newMessageAdded} />
         <Bottombar activeRoomId={activeRoomId} username={username}/>   
